@@ -1,4 +1,0 @@
-bin_PROGRAMS=ns_uts
-ns_uts_SOURCES=src/main.cpp
-
-AM_CPPFLAGS = -DONLY_WITH_BUILDSYSTEM

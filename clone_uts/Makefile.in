@@ -86,7 +86,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = ns_uts$(EXEEXT)
+bin_PROGRAMS = clone_uts$(EXEEXT)
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -102,9 +102,9 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
-am_ns_uts_OBJECTS = src/main.$(OBJEXT)
-ns_uts_OBJECTS = $(am_ns_uts_OBJECTS)
-ns_uts_LDADD = $(LDADD)
+am_clone_uts_OBJECTS = src/main.$(OBJEXT)
+clone_uts_OBJECTS = $(am_clone_uts_OBJECTS)
+clone_uts_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -135,8 +135,8 @@ AM_V_CXXLD = $(am__v_CXXLD_@AM_V@)
 am__v_CXXLD_ = $(am__v_CXXLD_@AM_DEFAULT_V@)
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(ns_uts_SOURCES)
-DIST_SOURCES = $(ns_uts_SOURCES)
+SOURCES = $(clone_uts_SOURCES)
+DIST_SOURCES = $(clone_uts_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -267,7 +267,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-ns_uts_SOURCES = src/main.cpp
+clone_uts_SOURCES = src/main.cpp
 AM_CPPFLAGS = -DONLY_WITH_BUILDSYSTEM
 all: all-am
 
@@ -356,9 +356,9 @@ src/$(DEPDIR)/$(am__dirstamp):
 	@: > src/$(DEPDIR)/$(am__dirstamp)
 src/main.$(OBJEXT): src/$(am__dirstamp) src/$(DEPDIR)/$(am__dirstamp)
 
-ns_uts$(EXEEXT): $(ns_uts_OBJECTS) $(ns_uts_DEPENDENCIES) $(EXTRA_ns_uts_DEPENDENCIES) 
-	@rm -f ns_uts$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(ns_uts_OBJECTS) $(ns_uts_LDADD) $(LIBS)
+clone_uts$(EXEEXT): $(clone_uts_OBJECTS) $(clone_uts_DEPENDENCIES) $(EXTRA_clone_uts_DEPENDENCIES) 
+	@rm -f clone_uts$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(clone_uts_OBJECTS) $(clone_uts_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
