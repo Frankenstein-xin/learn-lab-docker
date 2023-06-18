@@ -1,0 +1,3 @@
+[submodule "capabilities/iputils"]
+	path = capabilities/iputils
+	url = https://github.com/iputils/iputils
