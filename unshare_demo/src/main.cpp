@@ -57,7 +57,6 @@ int main(int argc, char *argv[]) {
         usage(argv[0]);
     }
     
-
     if (-1 == unshare(flags)) {
         errExit("unshare");
     }
